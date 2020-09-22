@@ -1,0 +1,196 @@
+.front-page-header {
+
+  div {
+    display: block;
+    position: relative;
+    clip-path: $bottom-clip-path;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    #overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000aa;
+    }
+  }
+
+  h3 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 86px;
+		font-weight: 900;
+    z-index: 100;
+  }
+
+	h4 {
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		z-index:100;
+		text-align: center;
+	}
+
+  span {
+    position: absolute;
+    top: calc(25% + 100px);
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 100;
+		font-size: 44px;
+  }
+
+  a {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    color: white;
+    font-size: 3rem;
+
+    i {
+      position: absolute;
+    }
+  }
+}
+
+.front-page-main {
+  background-image: linear-gradient(to left, $clr-secondary 0%, $clr-primary 50%, $clr-secondary 100%);
+  clip-path: $double-clip-path;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  .front-page-main-background {
+    background-color: lighten($clr-background, 2%);
+    clip-path: $double-clip-path;
+    padding-top: 1%;
+  }
+}
+
+.front-page-title-social {
+	margin-top: 1rem;
+	text-align: center;
+	width: 100%;
+}
+
+.front-page-social {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+
+	a {
+		text-decoration: none;
+
+		&:focus {
+			outline: none;
+
+			div div {
+				background-position:right bottom;
+				& > i {
+					color: white!important;
+				}
+			}
+
+			div.reverse div {
+				background-position: top;
+			}
+		}
+	}
+}
+
+.front-page-social-icon {
+  display: inline-block;
+  margin: 5px;
+  padding: 4px 4px 2px;
+  clip-path: $triangle-clip-path;
+
+  & > div {
+    clip-path: $triangle-clip-path;
+    transition: all 0.15s linear;
+    background-size: 100% 200%;
+    background-position:right top;
+
+    &:hover {
+      background-position:right bottom;
+      & > i {
+        color: white!important;
+      }
+    }
+    & > i {
+      font-size: 40px;
+      margin: 40px 40px 20px;
+    }
+  }
+
+  &.reverse {
+    position: relative;
+    top: -31px;
+    margin-left: -60px;
+    margin-right: -60px;
+    padding: 2px 4px 4px;
+    clip-path: $reversed-triangle-clip-path;
+
+    & > div {
+      clip-path: $reversed-triangle-clip-path;
+      background-position: bottom;
+
+      &:hover {
+        background-position: top;
+      }
+
+      & > i {
+        font-size: 50px;
+        margin: 20px 50px 50px;
+      }
+    }
+  }
+
+  &.linkedin {
+    background-color: $clr-linkedin-blue;
+
+    & > div {
+      background-image: linear-gradient(to bottom, black 50%, $clr-linkedin-blue 50%);
+
+      & > i {
+        color: $clr-linkedin-blue;
+      }
+
+    }
+  }
+
+  &.twitter {
+    background-color: $clr-twitter-blue;
+
+    & > div {
+      background-image: linear-gradient(to bottom, black 50%, $clr-twitter-blue 50%);
+
+      & > i {
+        color: $clr-twitter-blue;
+      }
+
+    }
+  }
+
+  &.gitlab {
+    background-color: $clr-gitlab-purple;
+
+    & > div {
+      background-image: linear-gradient(to bottom, $clr-gitlab-purple 50%, black 50%);
+
+      & > i {
+        color: $clr-gitlab-purple;
+      }
+
+    }
+  }
+}
+

@@ -1,0 +1,22 @@
+blockquote {
+	margin-left: 10px;
+	padding-left: 5px;
+	border-left: 5px solid $clr-primary;
+
+	blockquote {
+		border-left: 5px solid $clr-secondary;
+
+		blockquote {
+			border-left: 5px solid $clr-tertiary;
+		}
+	}
+}
+
+.highlight > pre {
+	padding: 5px;
+	overflow: scroll;
+}
+
+.content-container img {
+	width: 100%;
+}

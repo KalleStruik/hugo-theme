@@ -1,0 +1,16 @@
+<nav>
+	<div class="container clearfix">
+		<a class="brand-logo" href="/">Kalle Struik</a>
+		<div class="spacer"></div>
+		<ul>
+			<li>
+				<a href="/">Home</a>
+			</li>
+			{{ range .Site.Menus.main }}
+			<li>
+				<a href="{{ .URL }}">{{ .Name }}</a>
+			</li>
+			{{ end }}
+		</ul>
+	</div>
+</nav>

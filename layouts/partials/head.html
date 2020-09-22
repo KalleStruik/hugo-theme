@@ -1,0 +1,10 @@
+<title>{{ .Title }} | Kalle Struik</title>
+<!-- Import font awesome -->
+<link type="text/css" rel="stylesheet" href="/css/fontawesome.min.css" />
+
+{{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed")}}
+{{ $style := resources.Get "/sass/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>

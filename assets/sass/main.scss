@@ -1,0 +1,23 @@
+@import "_colors";
+@import "_constants";
+@import "layout";
+@import "typography";
+@import "navbar";
+@import "elements";
+@import "front-page";
+@import "blog";
+@import "projects";
+
+html {
+  background-color: $clr-background;
+  scrollbar-width: thin;
+  scrollbar-color: darken($clr-background, 10%) $clr-background;
+  scroll-behavior: smooth;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+

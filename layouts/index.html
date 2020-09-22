@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{ partial "head.html" . }}
+	</head>
+	<body>
+		{{ partial "navbar.html" . }}
+		<div class="front-page-header">
+			<div>
+				<h3 class="hide-on-m-down">Kalle Struik</h3>
+				<span class="hide-on-m-down">Forever work in progress</span>
+				<h4 class="hide-on-l-up">Forever work in progress</h4>
+				{{ with .Params.featured_image }}<img src="{{ . }}">{{ end }}
+				<div id="overlay"></div>
+		</div>
+		</div>
+
+		<div class="container">
+			<div class="white-text" id="content">{{ .Content }}</div>
+		</div>
+
+		<div class="front-page-main">
+			<div class="front-page-main-background">
+				<h3 class="front-page-title-social">Social</h3>
+				<div class="front-page-social">
+					<a href="{{ .Params.linkedin }}" target="_blank">
+						<div class="front-page-social-icon linkedin">
+							<div>
+								<i class="fab fa-linkedin"></i>
+							</div>
+						</div>
+					</a>
+					<a href="{{ .Params.gitlab }}" target="_blank">
+						<div class="front-page-social-icon reverse gitlab">
+							<div>
+								<i class="fab fa-gitlab"></i>
+								</div>
+						</div>
+					</a>
+					<a href="{{ .Params.twitter }}" target="_blank">
+						<div class="front-page-social-icon twitter">
+							<div>
+								<i class="fab fa-twitter"></i>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		{{ partial "footer.html" . }}
+	</body>
+</html>

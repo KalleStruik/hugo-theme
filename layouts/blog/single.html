@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{ partial "head.html" . }}
+	</head>
+	<body>
+		{{ partial "navbar.html" . }}
+		<div class="blog-post-featured-image" style="background-image: url('{{ .Params.featured_image}}');">
+			<div class="cover"></div>
+			<div class="post-info">
+				<h3 class="post-title">{{ .Title }}</h3>
+				<span class="date"><i class="fas fa-calendar-alt"></i> {{ .Date.Format "June 2, 2006" }}</span>
+				<span class="reading-time"><i class="fas fa-clock"></i> {{ .ReadingTime}} Minutes</span>
+			</div>
+		</div>
+		<div class="container content-container clearfix" style="color: white;">
+			{{ .Content }}
+		</div>
+		{{ partial "footer.html" . }}
+	</body>
+</html>

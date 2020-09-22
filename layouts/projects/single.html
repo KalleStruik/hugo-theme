@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{ partial "head.html" . }}
+	</head>
+	<body>
+		{{ partial "navbar.html" . }}
+		<div class="project-featured-image" style="background-image: url('{{ .Params.featured_image}}');">
+			<div class="cover"></div>
+			<div class="post-info">
+				<h3 class="post-title">{{ .Title }}</h3>
+				<span class="date"><i class="fas fa-calendar-alt"></i> {{ .Date.Format "June 2, 2006" }}</span>
+				<span class="reading-time"><i class="fas fa-clock"></i> {{ .ReadingTime}} Minutes</span>
+			</div>
+		</div>
+		{{ with .Params.links }}
+			<div class="project-links">
+			{{ range . }}
+				<a href="{{ .url }}" target="_blank" class="{{ .color }}">
+					<i class="fas {{ .icon }} left"></i> {{ .name }}
+				</a>
+			{{ end }}
+			</div>
+		{{ end }}
+		<div class="container content-container clearfix" style="color: white;">
+			{{ .Content }}
+		</div>
+		{{ partial "footer.html" . }}
+	</body>
+</html>

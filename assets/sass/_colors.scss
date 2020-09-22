@@ -1,0 +1,41 @@
+// ===========
+// Main Colors
+// ===========
+$clr-primary: #af0f01;
+$clr-secondary: #d05401;
+$clr-tertiary: #cfc501;
+
+// ===============
+// Variable Colors
+// ===============
+$clr-background: #181818;
+$clr-navbar: #000000;
+$clr-text: #FFFFFF;
+
+// =============
+// Accent Colors
+// =============
+$clr-word-blue: #2B579A;
+$clr-powerpoint-orange: #B7472A;
+$clr-excel-green: #217346;
+$clr-client-pink: #842D2D;
+$clr-gitlab-purple: #6033a8;
+$clr-reddit-orange: #ff4500;
+$clr-github-grey: #24292e;
+$clr-linkedin-blue: #0077b5;
+$clr-twitter-blue: #1da1f2;
+$clr-pdf-red: #ca2a2a;
+
+
+$accent-colors: (
+	word-blue: $clr-word-blue,
+	powerpoint-orange: $clr-powerpoint-orange,
+	excel-green: $clr-excel-green,
+	client-pink: $clr-client-pink,
+	gitlab-purple: $clr-gitlab-purple,
+	reddit-orange: $clr-reddit-orange,
+	github-grey: $clr-github-grey,
+	linkedin-blue: $clr-linkedin-blue,
+	twitter-blue: $clr-twitter-blue,
+	pdf-red: $clr-pdf-red,
+)
